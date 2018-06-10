@@ -1,11 +1,11 @@
 import EOS from 'eosjs'
 import Cookies from 'universal-cookie'
-
+import { POST_DATA } from './data'
 
 class APIClient {
     constructor() {
         const config = {
-            chainId: 'cf057bbfb72640471fd910bcb67639c22df9f92470936cddc1ade0e2f2e7dc4f', // 32 byte (64 char) hex string
+            chainId: '353876bab6268e7d5e55cfdd912034f2524b0ce48ab578856582092860dbeb4f', // 32 byte (64 char) hex string
             keyProvider: ['5Hte6Yq24wQ7RaGto5skLTLgwcHVUr17fjqBRAEV3wmTuhcczwJ'], // WIF string or array of keys..
             httpEndpoint: 'http://10.101.2.115:8888',
             mockTransactions: () => null, // or 'fail'
@@ -39,6 +39,17 @@ class APIClient {
         })
     }
 
+    initEOS() {
+        POST_DATA.forEach((item, index) => {
+            setTimeout(() => {
+                console.log('Sending ' + index)
+                this.submit(item).then(() => console.log('Index ' + index + ' ok')).catch(e => {
+                    console.log(e)
+                })
+            }, 2000 * index)
+        })
+    }
 }
-
-export default new APIClient()
+const client = new APIClient()
+window.client = client
+export default client

@@ -16,6 +16,7 @@ const styles = {
         height: 200,
         position: 'relative',
         background: 'white',
+        overflow: 'hidden',
         '&:hover': {
             background: '#DDD',
             cursor: 'pointer',

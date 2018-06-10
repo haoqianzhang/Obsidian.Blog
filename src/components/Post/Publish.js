@@ -109,6 +109,7 @@ class Publish extends Component {
             this.setState({loading: false, failure: true, success: false})
             return
         }
+        
         APIClient.submit({
             username: 'serg',
             category: this.state.category,
@@ -128,6 +129,7 @@ class Publish extends Component {
             this.setState({loading: false, failure: true, success: true})
             console.error(error)
         })
+        
     }
 
     render() {
@@ -149,7 +151,7 @@ class Publish extends Component {
                     <Typography className={classes.subtitle}>Category</Typography>
                     <Select fullWidth className={classes.textField} onChange={(e) => this.handleTextFieldChange(e, 'category')} value={category} style={{overflow: 'hidden'}}>
                         {CATEGORIES.map((item, index) => {
-                            return (<MenuItem value={item} key={index}>{item}</MenuItem>)
+                            return (<MenuItem value={item} key={index} style={{textTransform: 'uppercase'}}>{item}</MenuItem>)
                         })}
                     </Select>
                     <FixedSpace size="sm"/>

@@ -115,7 +115,7 @@ class Reply extends Component {
             image: '',
             author: this.state.name,
             post_id: this.props.postId,
-            email: this.state.email,
+            email: this.state.email, 
         }).then(response => {
             this.setState({loading: false, success: true, failure: false})
             console.log(response)
