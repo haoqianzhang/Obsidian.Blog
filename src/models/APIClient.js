@@ -9,7 +9,7 @@ class APIClient {
             keyProvider: ['5Hte6Yq24wQ7RaGto5skLTLgwcHVUr17fjqBRAEV3wmTuhcczwJ'], // WIF string or array of keys..
             httpEndpoint: 'http://10.101.2.115:8888',
             mockTransactions: () => null, // or 'fail'
-            expireInSeconds: 60,
+            expireInSeconds: 1000,
             broadcast: true,
             debug: false, // API and transactions
             sign: true
@@ -41,12 +41,12 @@ class APIClient {
 
     initEOS() {
         POST_DATA.forEach((item, index) => {
-            setTimeout(() => {
-                console.log('Sending ' + index)
-                this.submit(item).then(() => console.log('Index ' + index + ' ok')).catch(e => {
-                    console.log(e)
-                })
-            }, 2000 * index)
+            // setTimeout(() => {
+            console.log('Sending ' + index)
+            this.submit(item).then(() => console.log('Index ' + index + ' ok')).catch(e => {
+                console.log(e)
+            })
+            // }, 5000 * index)
         })
     }
 }
