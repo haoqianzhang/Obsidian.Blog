@@ -55,7 +55,7 @@ class Navbar extends Component {
             <AppBar className={classes.navbar} position="fixed">
                 <Toolbar className={classes.toolbar}>
                     <Link to={HOME} className={classes.title}>
-                        INF
+                        Obsidian
                     </Link>
                     <div className={classes.pullRight}>
                         <IconButton onClick={this.handleEditClick}>
