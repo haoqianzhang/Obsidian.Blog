@@ -8,6 +8,7 @@ import { CATEGORIES } from 'config'
 import { withRouter } from 'react-router-dom'
 import { green, red} from '@material-ui/core/colors'
 import classNames from 'classnames'
+// import { GlobalStore } from '../../models'
 
 const styles = theme => {
     const colors = theme.palette
@@ -123,6 +124,7 @@ class Publish extends Component {
             email: 'vergil.choi.zyc@gmail.com',
         }).then(response => {
             this.setState({loading: false, success: true, failure: false})
+            // GlobalStore.reloadData()
             console.log(response)
             this.props.history.push('/')
         }).catch(error => {

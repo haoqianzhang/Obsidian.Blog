@@ -21,8 +21,9 @@ const styles = {
         textTransform: 'uppercase',
     },
     title: {
-        fontSize: 30,
+        fontSize: 25,
         fontWeight: 'bold',
+        lineHeight: 1.2,
     },
     subtitle: {
         fontSize: 12,
