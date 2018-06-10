@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="210px" height="197px" viewBox="0 0 210 197" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="203.084738%" y1="36.8418843%" x2="50%" y2="56.9587125%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="116.067472%" y1="84.7355862%" x2="35.8378669%" y2="50%" id="linearGradient-2">
+            <stop stop-color="#AEAEAE" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-262.000000, -158.000000)">
+            <g id="Group" transform="translate(261.000000, 158.000000)">
+                <polygon id="Path" fill="url(#linearGradient-1)" points="111.192005 0.574656679 0.961819067 136.885129 145.281401 197.037681"></polygon>
+                <polygon id="Path-2" fill="url(#linearGradient-2)" points="146.182847 196.457792 210.696266 88.3050985 112.220819 0.731576599"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

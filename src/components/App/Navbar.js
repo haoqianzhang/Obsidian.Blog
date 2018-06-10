@@ -3,6 +3,7 @@ import { withStyles } from '@material-ui/core/styles'
 import { Link, withRouter } from 'react-router-dom'
 import { AppBar, Toolbar, Avatar, IconButton } from '@material-ui/core'
 import avatar_placeholder from 'assets/avatar-placeholder.svg'
+import logo from 'assets/logo.svg'
 import editIcon from 'assets/edit-button.svg'
 
 import { HOME } from 'config'
@@ -32,6 +33,10 @@ const styles = {
         color: 'black',
         letterSpacing: 8,
     },
+    pullLeft: {
+        position: 'absolute',
+        left: 30,
+    },
     pullRight: {
         position: 'absolute',
         right: 30,
@@ -54,6 +59,9 @@ class Navbar extends Component {
         return (
             <AppBar className={classes.navbar} position="fixed">
                 <Toolbar className={classes.toolbar}>
+                    <div className={classes.pullLeft}>
+                        <img src={logo} alt="Logo" width="40"/>
+                    </div>
                     <Link to={HOME} className={classes.title}>
                         Obsidian
                     </Link>
